@@ -1,0 +1,439 @@
+/*!*********************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!./styles/fonts.css ***!
+  \*********************************************************************/
+@font-face {
+    font-family: "TT Lakes Medium";
+    src: url(fonts/TTLakes-Medium.ttf);
+}
+
+@font-face {
+    font-family: "TT Lakes Regular";
+    src: url(fonts/TTLakes-Regular.ttf);
+}
+
+@font-face {
+    font-family: "TT Lakes Bold";
+    src: url(fonts/TTLakes-Bold.ttf)
+}
+/*!*************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/scss.scss ***!
+  \*************************************************************************************************************/
+body {
+  margin: 0;
+  background-color: #F8F8F8;
+  font-family: 'TT Lakes Medium', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex; }
+  .container .menu {
+    width: 320px;
+    background-color: #FFF; }
+    .container .menu .menu__container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      gap: 38px;
+      margin: 30px 24px; }
+      .container .menu .menu__container .menu__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .container .menu .menu__container .menu__header .menu__logo a div,
+        .container .menu .menu__container .menu__header .logo a div {
+          background-image: url(images/logo.png);
+          background-size: cover;
+          width: 97px;
+          height: 51px;
+          cursor: pointer;
+          transition: 0.5s; }
+          .container .menu .menu__container .menu__header .menu__logo a div:hover,
+          .container .menu .menu__container .menu__header .logo a div:hover {
+            filter: drop-shadow(0px 0px 1px #80949F);
+            scale: 1.05; }
+        .container .menu .menu__container .menu__header .menu__action {
+          flex-direction: column; }
+          .container .menu .menu__container .menu__header .menu__action a {
+            cursor: pointer; }
+            .container .menu .menu__container .menu__header .menu__action a div {
+              background-image: url(images/ic_search.png);
+              width: 40px;
+              height: 40px;
+              background-size: cover;
+              transition: 0.5s; }
+              .container .menu .menu__container .menu__header .menu__action a div:hover {
+                filter: drop-shadow(0px 0px 5px #ff3e79);
+                scale: 1.1; }
+      .container .menu .menu__container .menu__items {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        flex: 1 0 auto; }
+        .container .menu .menu__container .menu__items a {
+          color: #1B1C21;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.2px; }
+        .container .menu .menu__container .menu__items .menu__item-action a,
+        .container .menu .menu__container .menu__items .menu__item:hover a {
+          color: #7E7E82;
+          position: relative; }
+          .container .menu .menu__container .menu__items .menu__item-action a::before,
+          .container .menu .menu__container .menu__items .menu__item:hover a::before {
+            content: "";
+            display: block;
+            background-color: #41f6d7;
+            width: 4px;
+            height: 32px;
+            position: absolute;
+            border-radius: 0 5px 5px 0;
+            left: -24px;
+            top: -6px; }
+      .container .menu .menu__container .menu__footer {
+        display: flex;
+        flex-direction: column; }
+        .container .menu .menu__container .menu__footer .menu__footer__active-items {
+          display: flex;
+          gap: 16px; }
+          .container .menu .menu__container .menu__footer .menu__footer__active-items .menu__footer__active-item {
+            transition: 0.5s; }
+            .container .menu .menu__container .menu__footer .menu__footer__active-items .menu__footer__active-item a div {
+              background-size: cover;
+              width: 40px;
+              height: 40px;
+              cursor: pointer;
+              transition: 0.5s; }
+              .container .menu .menu__container .menu__footer .menu__footer__active-items .menu__footer__active-item a div:hover {
+                filter: drop-shadow(0px 0px 5px #ff3e79);
+                scale: 1.1; }
+            .container .menu .menu__container .menu__footer .menu__footer__active-items .menu__footer__active-item:first-child a div {
+              background-image: url(images/ic_phone.png); }
+            .container .menu .menu__container .menu__footer .menu__footer__active-items .menu__footer__active-item:first-child:hover {
+              transform: rotate(-30deg); }
+            .container .menu .menu__container .menu__footer .menu__footer__active-items .menu__footer__active-item:nth-child(2) a div {
+              background-image: url(images/ic_chat.png); }
+            .container .menu .menu__container .menu__footer .menu__footer__active-items .menu__footer__active-item:last-child a div {
+              background-image: url(images/ic_profile.png); }
+        .container .menu .menu__container .menu__footer .menu__footer-contacts .menu__footer-email {
+          padding-top: 16px;
+          color: #1b1c21;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: -0.2px; }
+        .container .menu .menu__container .menu__footer .menu__footer-contacts .menu__footer-phone-number {
+          font-family: 'TT Lakes Bold', sans-serif;
+          padding-top: 12px;
+          color: #1b1c21;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: -0.6px; }
+        .container .menu .menu__container .menu__footer .menu__footer-language-selection {
+          padding-top: 40px;
+          padding-bottom: 40px;
+          display: flex;
+          gap: 7px; }
+          .container .menu .menu__container .menu__footer .menu__footer-language-selection a {
+            text-decoration: none;
+            color: #1b1c21;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.2px; }
+            .container .menu .menu__container .menu__footer .menu__footer-language-selection a:hover {
+              color: #7e7e82;
+              font-weight: 600; }
+        .container .menu .menu__container .menu__footer .menu__footer-language-selection-item-activ a {
+          color: #7e7e82; }
+  .container .desktop {
+    width: 1120px;
+    padding: 42px 35px 0 35px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column; }
+    .container .desktop .header__desktop .header__container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      position: relative; }
+      .container .desktop .header__desktop .header__container .header__title {
+        font-family: 'TT Lakes Medium', sans-serif;
+        color: #1b1c21;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.6px; }
+        .container .desktop .header__desktop .header__container .header__title::before {
+          content: "";
+          display: block;
+          background-color: #41f6d7;
+          width: 3px;
+          height: 40px;
+          position: absolute;
+          border-radius: 0 5px 5px 0;
+          left: -35px; }
+      .container .desktop .header__desktop .header__container .header__action {
+        display: flex;
+        flex-direction: row;
+        gap: 32px; }
+        .container .desktop .header__desktop .header__container .header__action .header__action_item a {
+          display: flex;
+          align-items: center;
+          gap: 8px; }
+          .container .desktop .header__desktop .header__container .header__action .header__action_item a .header__action_item_text {
+            color: #1b1c21;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px; }
+          .container .desktop .header__desktop .header__container .header__action .header__action_item a .header__action_item_img {
+            background-size: cover;
+            width: 40px;
+            height: 40px; }
+        .container .desktop .header__desktop .header__container .header__action .header__action_item:first-child a .header__action_item_img {
+          background-image: url(images/ic_repair.png); }
+        .container .desktop .header__desktop .header__container .header__action .header__action_item:last-child a .header__action_item_img {
+          background-image: url(images/ic_checkstatus.png); }
+    .container .desktop .nav {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 9px;
+      justify-content: space-between; }
+      .container .desktop .nav .nav_item {
+        padding: 9px 21px;
+        border: 2px solid #F8F8F8; }
+        .container .desktop .nav .nav_item a {
+          color: #7e7e82;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.2px; }
+      .container .desktop .nav .nav_item-activ,
+      .container .desktop .nav .nav_item:hover {
+        box-sizing: border-box;
+        border: 2px solid #b8ffec;
+        border-radius: 6px;
+        background: white; }
+    .container .desktop .main {
+      display: flex;
+      justify-content: space-between; }
+      .container .desktop .main .main__info {
+        max-width: 490px; }
+        .container .desktop .main .main__info .main__info__text,
+        .container .desktop .main .main__info .main__info__text-more {
+          font-family: "TT Lakes Regular", sans-serif;
+          color: #1b1c21;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.2px;
+          padding-bottom: 14px; }
+        .container .desktop .main .main__info .main__info__text-more {
+          display: none; }
+      .container .desktop .main .main__image {
+        background-image: url(images/cps.png);
+        background-size: cover;
+        width: 531px;
+        height: 307px; }
+    .container .desktop .brands .brands__container .brands__items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 16px;
+      column-gap: 32px;
+      padding: 24px 0; }
+      .container .desktop .brands .brands__container .brands__items .brands__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #eaeaea;
+        border-radius: 6px;
+        background: #FFF;
+        padding: 0 16px; }
+        .container .desktop .brands .brands__container .brands__items .brands__item .brands__item__image {
+          background-size: auto;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: center left; }
+        .container .desktop .brands .brands__container .brands__items .brands__item:first-child .brands__item__image {
+          background-image: url(images/lenovo.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(2) .brands__item__image {
+          background-image: url(images/samsung.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(3) .brands__item__image {
+          background-image: url(images/apple.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(4) .brands__item__image {
+          background-image: url(images/ViewSonic.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(5) .brands__item__image {
+          background-image: url(images/bosch.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(6) .brands__item__image {
+          background-image: url(images/HP.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(7) .brands__item__image {
+          background-image: url(images/accer.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(8) .brands__item__image {
+          background-image: url(images/sony.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(9) .brands__item__image {
+          background-image: url(images/lenovo.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(10) .brands__item__image {
+          background-image: url(images/samsung.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item:nth-child(11) .brands__item__image {
+          background-image: url(images/apple.png); }
+        .container .desktop .brands .brands__container .brands__items .brands__item .brands__item__button {
+          margin: 16px 0; }
+    .container .desktop .techniques__container .techniques__items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 16px;
+      column-gap: 32px;
+      padding: 24px 0; }
+      .container .desktop .techniques__container .techniques__items .techniques__item {
+        display: flex;
+        justify-content: space-between;
+        flex: 1 0 180px;
+        flex-basis: 20%;
+        height: 160px;
+        box-sizing: border-box;
+        border: 1px solid #eaeaea;
+        border-radius: 6px;
+        background: #FFF;
+        padding: 16px 16px; }
+        .container .desktop .techniques__container .techniques__items .techniques__item .techniques__item__text {
+          color: #1b1c21;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: -0.2px; }
+        .container .desktop .techniques__container .techniques__items .techniques__item .techniques__item__button {
+          margin-top: auto; }
+    .container .desktop .price {
+      padding-bottom: 50px; }
+      .container .desktop .price .price__container .price__items {
+        font-size: 14px; }
+        .container .desktop .price .price__container .price__items .price__item-header {
+          display: grid;
+          grid-template-columns: auto 120px 120px 120px;
+          padding: 23px 24px;
+          color: #7e7e82;
+          font-weight: 500;
+          line-height: 16px;
+          letter-spacing: 0px; }
+        .container .desktop .price .price__container .price__items .price__item {
+          display: grid;
+          grid-template-columns: auto 120px 120px 120px;
+          align-items: center;
+          background-color: #FFF;
+          padding: 23px 24px;
+          font-family: 'TT Lakes Regular', sans-serif;
+          color: #1b1c21;
+          line-height: 18px;
+          letter-spacing: 0.2px; }
+          .container .desktop .price .price__container .price__items .price__item:nth-child(2) {
+            border-radius: 6px 6px 0 0; }
+          .container .desktop .price .price__container .price__items .price__item:last-child {
+            border-radius: 0 0 6px 6px; }
+          .container .desktop .price .price__container .price__items .price__item:nth-child(2), .container .desktop .price .price__container .price__items .price__item:nth-child(3), .container .desktop .price .price__container .price__items .price__item:nth-child(4), .container .desktop .price .price__container .price__items .price__item:nth-child(5) {
+            border-bottom: 1px solid #eaeaea; }
+          .container .desktop .price .price__container .price__items .price__item button {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 16px;
+            background: #ff3e79;
+            border: none; }
+            .container .desktop .price .price__container .price__items .price__item button .button_text {
+              color: white;
+              font-family: 'TT Lakes Bold', sans-serif;
+              line-height: 24px;
+              letter-spacing: -0.15px;
+              text-transform: uppercase;
+              padding: 4px 12px; }
+            .container .desktop .price .price__container .price__items .price__item button .button_img-arrow {
+              background-image: url(images/dropdown-white.png);
+              background-size: auto;
+              width: 8px;
+              height: 10px;
+              background-repeat: no-repeat;
+              padding-left: 12px; }
+      .container .desktop .price .price__container .price__info {
+        color: #1b1c21;
+        font-family: 'TT Lakes Regular', sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        padding: 32px 0 16px 0;
+        max-width: 420px; }
+      .container .desktop .price .price__container .price__button-more {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: #1b1c21;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px; }
+        .container .desktop .price .price__container .price__button-more .price__more-button-arrow {
+          background-image: url(images/Line.png);
+          background-size: auto;
+          width: 6px;
+          height: 10px; }
+    .container .desktop .footer {
+      padding: 33px 0 21px;
+      display: flex;
+      justify-content: space-between;
+      color: #7e7e82;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      opacity: 0.72; }
+      .container .desktop .footer .footer__info {
+        max-width: 330px;
+        text-align: right; }
+
+.button__more {
+  display: flex;
+  align-items: center; }
+  .button__more .button__more-button {
+    background-image: url(images/icon_arrow.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 12px; }
+  .button__more .button__more-button-text {
+    padding-left: 8px;
+    color: #1b1c21;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px; }
+
+.title {
+  font-family: "TTLakes-Regular", sans-serif;
+  color: #7e7e82;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  padding: 16px 0; }
+
+.button__arrow {
+  display: flex;
+  border: 2px solid #ff3e79;
+  border-radius: 20px;
+  background: #FFF;
+  min-width: 40px;
+  height: 40px;
+  cursor: pointer; }
+  .button__arrow div {
+    background-image: url(images/dropdown.png);
+    background-size: auto;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+
+/*# sourceMappingURL=main.css.map*/
