@@ -1,0 +1,614 @@
+$menu-background-color: #FFF;
+$main-background-color: #F8F8F8;
+$border-color: rgb(234, 234, 234);
+
+
+// @font-face {
+//     font-family: 'TT Lakes Medium';
+//     src: url('../assets/fonts/TTLakes-Medium.ttf');
+// }
+
+body {
+    margin: 0;
+    background-color: $main-background-color;
+    font-family: 'TT Lakes Medium', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+
+    .menu {
+        width: 320px;
+        background-color: $menu-background-color;
+        .menu__container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            gap: 38px;
+            margin: 30px 24px;
+            .menu__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 120px;
+                .menu__logo,
+                .logo { 
+                    a {
+                        div {
+                            background-image: url('../assets/images/logo.png');
+                            background-size: cover;
+                            width: 97px;
+                            height: 51px;
+                            cursor: pointer;
+                            transition: 0.5s;
+                            &:hover {
+                                filter: drop-shadow(0px 0px 1px #80949F);
+                                scale: 1.05;
+                            }
+                        }
+                    }
+                }
+                .menu__action {
+                    flex-direction: column;
+                    a {
+                        cursor: pointer;
+                        div {
+                            background-image: url('../assets/images/icon/ic_search.png');
+                            width: 40px;
+                            height: 40px;
+                            background-size: cover;
+                            transition: 0.5s;
+                            &:hover {
+                                filter: drop-shadow(0px 0px 5px rgb(255, 62, 121));
+                                scale: 1.1;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu__items {
+                display: flex;
+                flex-direction: column;
+                gap: 29px;
+                flex: 1 0 auto;
+                a {
+                    color: #1B1C21;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.2px;
+                }
+                .menu__item-action,
+                .menu__item:hover {
+                    a {
+                        color: #7E7E82;
+                        position: relative;
+                        
+                        &::before {
+                            content: "";
+                            display: block;
+                            background-color: rgb(65, 246, 215);
+                            width: 4px;
+                            height: 32px;
+                            position: absolute;
+                            border-radius: 0 5px 5px 0;
+                            left: -24px;
+                            top: -6px;
+                        }
+                    }
+    
+                }
+            }
+            
+            .menu__footer {
+                display: flex;
+                flex-direction: column;
+                
+                .menu__footer__active-items {
+                    display: flex;
+                    gap: 16px;
+
+                    .menu__footer__active-item {
+                        transition: 0.5s;
+                        a {
+                            div {
+                                background-size: cover;
+                                width: 40px;
+                                height: 40px;
+                                cursor: pointer;
+                                transition: 0.5s;
+                                &:hover {
+                                    filter: drop-shadow(0px 0px 5px rgb(255, 62, 121));
+                                    scale: 1.1;
+                                }
+                            }
+                        }
+                        &:first-child {
+                            a {
+                                div {
+                                    background-image: url(../assets/images/icon/ic_phone.png);
+                                }
+                            }
+                            &:hover{
+                                transform: rotate(-30deg);
+                            }
+                        }
+                        &:nth-child(2) {
+                            a {
+                                div {
+                                    background-image: url(../assets/images/icon/ic_chat.png);
+                                }
+                            }
+                        }
+                        &:last-child {
+                            a {
+                                div {
+                                    background-image: url(../assets/images/icon/ic_profile.png);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .menu__footer-contacts {
+                    .menu__footer-email {
+                        padding-top: 16px;
+                        color: rgb(27, 28, 33);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: -0.2px;
+                    }
+                    .menu__footer-phone-number {
+                        font-family: 'TT Lakes Bold', sans-serif;
+                        padding-top: 12px;
+                        color: rgb(27, 28, 33);
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 32px;
+                        letter-spacing: -0.6px;
+                    }
+                }
+
+                .menu__footer-language-selection {
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    display: flex;
+                    gap: 7px;
+                    a {
+                        text-decoration: none;
+                        color: rgb(27, 28, 33);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: -0.2px;
+                        &:hover{
+                            color: rgb(126, 126, 130);
+                            font-weight: 600;
+                        }
+                    }
+                }
+                .menu__footer-language-selection-item-activ {
+                    a {
+                            color: rgb(126, 126, 130);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .desktop {
+        width: 1120px;
+        padding: 42px 35px 0 35px;
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+        .header__desktop {
+            .header__container {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                .header__title {
+                    font-family: 'TT Lakes Medium', sans-serif;
+                    color: rgb(27, 28, 33);
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 40px;
+                    letter-spacing: -0.6px;
+                    &::before {
+                        content: "";
+                        display: block;
+                        background-color: rgb(65, 246, 215);
+                        width: 3px;
+                        height: 40px;
+                        position: absolute;
+                        border-radius: 0 5px 5px 0;
+                        left: -35px;
+                        // top: -4px;
+                    }
+                }
+                .header__action {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 32px;
+                    .header__action_item {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            .header__action_item_text {
+                                color: rgb(27, 28, 33);
+                                font-size: 16px;
+                                line-height: 24px;
+                                letter-spacing: -0.2px;
+                            }
+                            .header__action_item_img {
+                                background-size: cover;
+                                width: 40px;
+                                height: 40px;
+                            }
+                            
+                        }
+                        &:first-child {
+                            a {
+                                .header__action_item_img {
+                                    background-image: url(../assets/images/icon/ic_repair.png);
+                                    
+                                }
+                            }
+                        }
+                        &:last-child {
+                            a {
+                                .header__action_item_img {
+                                    background-image: url(../assets/images/icon/ic_checkstatus.png);
+                                    
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 9px;
+            justify-content: space-between;
+            .nav_item {
+                padding: 9px 21px;
+                border: 2px solid $main-background-color;
+                a {
+                    color: rgb(126, 126, 130);
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.2px;
+                }
+            }
+            .nav_item-activ,
+            .nav_item:hover {
+                box-sizing: border-box;
+                border: 2px solid rgb(184, 255, 236);
+                border-radius: 6px;
+                background: rgb(255, 255, 255);
+            }
+        }
+        .main {
+            display: flex;
+            justify-content: space-between;
+            .main__info {
+                max-width: 490px;
+                .main__info__text,
+                .main__info__text-more {
+                    font-family: "TT Lakes Regular", sans-serif;
+                    color: rgb(27, 28, 33);
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.2px;
+                    padding-bottom: 14px;
+
+                }
+                .main__info__text-more {
+                    display: none;
+                }
+            }
+            .main__image {
+                background-image: url('../assets/images/cps.png');
+                background-size: cover;
+                width: 531px;
+                height: 307px;
+            }
+        }
+        .brands {
+            .brands__title {}
+            .brands__container {
+                .brands__items{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    row-gap: 16px;
+                    column-gap: 32px;
+                    padding: 24px 0;
+                    .brands__item{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border: 1px solid $border-color;
+                        border-radius: 6px;
+                        background: $menu-background-color;
+                        padding: 0 16px;
+                        .brands__item__image {
+                            background-size: auto;
+                            width: 100%;
+                            height: 100%;
+                            background-repeat: no-repeat;
+                            background-position: center left;
+                        }
+                        &:first-child {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/lenovo.png);
+                            }
+                        }
+                        &:nth-child(2) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/samsung.png);
+                            }
+                        }
+                        &:nth-child(3) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/apple.png);
+                            }
+                        }
+                        &:nth-child(4) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/ViewSonic.png);
+                            }
+                        }
+                        &:nth-child(5) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/bosch.png);
+                            }
+                        }
+                        &:nth-child(6) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/HP.png);
+                            }
+                        }
+                        &:nth-child(7) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/accer.png);
+                            }
+                        }
+                        &:nth-child(8) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/sony.png);
+                            }
+                        }
+                        &:nth-child(9) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/lenovo.png);
+                            }
+                        }
+                        &:nth-child(10) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/samsung.png);
+                            }
+                        }
+                        &:nth-child(11) {
+                            .brands__item__image {
+                                background-image: url(../assets/images/brands/apple.png);
+                            }
+                        }
+                        .brands__item__button {
+                            margin: 16px 0;
+                        }
+
+                    }
+                }
+                .swiper-pagination {
+                }
+            }
+        }
+
+        .techniques__container {
+            .techniques__items {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                row-gap: 16px;
+                column-gap: 32px;
+                padding: 24px 0;
+                .techniques__item{
+                    display: flex;
+                    justify-content: space-between;
+                    flex: 1 0 180px;
+                    flex-basis: 20%;
+                    height: 160px;
+                    box-sizing: border-box;
+                    border: 1px solid $border-color;
+                    border-radius: 6px;
+                    background: $menu-background-color;
+                    padding: 16px 16px;
+                    .techniques__item__text {
+                        color: rgb(27, 28, 33);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: -0.2px;
+                    }
+                    .techniques__item__button {
+                        margin-top: auto; 
+                    }
+                }
+            }
+        }
+
+        .price {
+            padding-bottom: 50px;
+            .price__title {
+
+            }
+            .price__container {
+                .price__items {
+                    font-size: 14px;
+                    .price__item-header {
+                        display: grid;
+                        grid-template-columns: auto 120px 120px 120px;
+                        padding: 23px 24px;
+                        color: rgb(126, 126, 130);
+                        font-weight: 500;
+                        line-height: 16px;
+                        letter-spacing: 0px;
+                    }
+                    .price__item {
+                        &:nth-child(2) {
+                            border-radius: 6px 6px 0 0;
+                        }
+                        &:last-child {
+                            border-radius: 0 0 6px 6px;
+                        }
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(4),
+                        &:nth-child(5) {
+                            border-bottom: 1px solid rgb(234, 234, 234);
+                        }
+                        display: grid;
+                        grid-template-columns: auto 120px 120px 120px;
+                        align-items: center;
+                        background-color: $menu-background-color;
+                        padding: 23px 24px;
+                        font-family: 'TT Lakes Regular', sans-serif;
+                        color: rgb(27, 28, 33);
+                        line-height: 18px;
+                        letter-spacing: 0.2px;
+                        button {
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            border-radius: 16px;
+                            background: rgb(255, 62, 121);
+                            border: none;
+                            .button_text {
+                                color: rgb(255, 255, 255);
+                                font-family: 'TT Lakes Bold', sans-serif;
+                                line-height: 24px;
+                                letter-spacing: -0.15px;
+                                text-transform: uppercase;
+                                padding: 4px 12px;
+                            }
+                            .button_img-arrow {
+                                background-image: url(../assets/images/icon/dropdown-white.png);
+                                background-size: auto;
+                                width: 8px;
+                                height: 10px;
+                                background-repeat: no-repeat;
+                                padding-left: 12px;
+                            }
+                        }
+                    }
+                }
+
+                .price__info {
+                    color: rgb(27, 28, 33);
+                    font-family: 'TT Lakes Regular', sans-serif;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.2px;
+                    padding: 32px 0 16px 0;
+                    max-width: 420px;
+                }
+
+                .price__button-more {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    color: rgb(27, 28, 33);
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: -0.2px;
+                    .price__more-button-arrow {
+                        background-image: url(../assets/images/icon/Line.png);
+                        background-size: auto;
+                        width: 6px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            padding: 33px 0 21px;
+            display: flex;
+            justify-content: space-between;
+            color: rgb(126, 126, 130);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            opacity: 0.72;
+            .footer__info {
+                max-width: 330px;
+                text-align: right;
+
+            }
+        }
+    }
+}
+
+
+.button__more {
+    display: flex;
+    align-items: center;
+    .button__more-button {
+        background-image: url(../assets/images/icon/icon_arrow.png);
+        background-size: auto;
+        background-repeat: no-repeat;
+        width: 8px;
+        height: 12px;
+    }
+    .button__more-button-text {
+        padding-left: 8px;
+        color: rgb(27, 28, 33);
+        font-family: TT Lakes;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+    }
+}
+
+.title {
+    font-family: "TTLakes-Regular", sans-serif;
+    color: rgb(126, 126, 130);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    padding: 16px 0;
+}
+
+.button__arrow {
+    display: flex;
+    border: 2px solid rgb(255, 62, 121);
+    border-radius: 20px;
+    background: $menu-background-color;
+    min-width: 40px;
+    height: 40px;
+    cursor: pointer;
+    div {
+        background-image: url(../assets/images/icon/dropdown.png);
+        background-size: auto;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

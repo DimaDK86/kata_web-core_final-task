@@ -1,0 +1,12 @@
+node_modules
+# src
+# webpack.config.js
+# package.json
+# package-lock.json
+
+dist
+Desktop.ini
+.sync_c45acff1f272.db-wal
+.sync_c45acff1f272.db
+.nextcloudsync.log
+.vscode/settings.json
