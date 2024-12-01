@@ -9,7 +9,7 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
     "deploy": "gh-pages -d dist"
   },
-  "author": "",
+  "author": "DimaDK <dimadk86@mail.ru>",
   "license": "ISC",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
@@ -23,7 +23,6 @@
     "less": "^4.2.1",
     "less-loader": "^12.2.0",
     "mini-css-extract-plugin": "^2.9.2",
-    "node-sass": "^9.0.0",
     "sass-loader": "^16.0.3",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.10",
@@ -33,7 +32,8 @@
   },
   "dependencies": {
     "jquery": "^3.7.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "sass-embedded": "^1.81.0"
   },
   "main": "webpack.config.js",
   "description": ""

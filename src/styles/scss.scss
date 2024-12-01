@@ -565,6 +565,19 @@ a {
                 }
 
                 .price__button-more {
+                    transition: 1s;
+                    &:hover {
+                        transition: 1s;
+                        color: #7E7E82;
+                        font-size: 22px;
+                        .price__more-button-arrow {
+                            transition: 1s;
+                            background-image: url(../assets/images/icon/Line.png);
+                            background-size: auto;
+                            width: 30px;
+                            height: 10px;
+                        }
+                    }
                     display: flex;
                     gap: 10px;
                     align-items: center;
@@ -603,6 +616,10 @@ a {
 
 
 .button__more {
+    transition: 0.5s;
+    &:hover {
+        opacity: 0.5;
+    }
     display: flex;
     align-items: center;
     .button__more-button {
