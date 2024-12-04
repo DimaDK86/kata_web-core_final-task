@@ -43,19 +43,8 @@ a {
       .container .menu .menu__container .menu__header {
         display: flex;
         justify-content: space-between;
-        align-items: center; }
-        .container .menu .menu__container .menu__header .menu__logo a div,
-        .container .menu .menu__container .menu__header .logo a div {
-          background-image: url(images/logo.png);
-          background-size: cover;
-          width: 97px;
-          height: 51px;
-          cursor: pointer;
-          transition: 0.5s; }
-          .container .menu .menu__container .menu__header .menu__logo a div:hover,
-          .container .menu .menu__container .menu__header .logo a div:hover {
-            filter: drop-shadow(0px 0px 1px #80949F);
-            scale: 1.05; }
+        align-items: center;
+        gap: 120px; }
         .container .menu .menu__container .menu__header .menu__action {
           flex-direction: column; }
           .container .menu .menu__container .menu__header .menu__action a {
@@ -151,6 +140,8 @@ a {
               font-weight: 600; }
         .container .menu .menu__container .menu__footer .menu__footer-language-selection-item-activ a {
           color: #7e7e82; }
+  .container .menu__screen {
+    display: no; }
   .container .desktop {
     width: 1120px;
     padding: 42px 35px 0 35px;
@@ -183,23 +174,32 @@ a {
         display: flex;
         flex-direction: row;
         gap: 32px; }
-        .container .desktop .header__desktop .header__container .header__action .header__action_item a {
-          display: flex;
-          align-items: center;
-          gap: 8px; }
-          .container .desktop .header__desktop .header__container .header__action .header__action_item a .header__action_item_text {
-            color: #1b1c21;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: -0.2px; }
-          .container .desktop .header__desktop .header__container .header__action .header__action_item a .header__action_item_img {
-            background-size: cover;
-            width: 40px;
-            height: 40px; }
-        .container .desktop .header__desktop .header__container .header__action .header__action_item:first-child a .header__action_item_img {
-          background-image: url(images/ic_repair.png); }
-        .container .desktop .header__desktop .header__container .header__action .header__action_item:last-child a .header__action_item_img {
-          background-image: url(images/ic_checkstatus.png); }
+        .container .desktop .header__desktop .header__container .header__action .header__action_item {
+          transition: 0.5s; }
+          .container .desktop .header__desktop .header__container .header__action .header__action_item a {
+            display: flex;
+            align-items: center;
+            gap: 8px; }
+            .container .desktop .header__desktop .header__container .header__action .header__action_item a .header__action_item_text {
+              color: #1b1c21;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: -0.2px;
+              transition: 0.5s; }
+            .container .desktop .header__desktop .header__container .header__action .header__action_item a .header__action_item_img {
+              background-size: cover;
+              width: 40px;
+              height: 40px;
+              transition: 0.5s; }
+            .container .desktop .header__desktop .header__container .header__action .header__action_item a:hover .header__action_item_text {
+              scale: 1.03; }
+            .container .desktop .header__desktop .header__container .header__action .header__action_item a:hover .header__action_item_img {
+              filter: drop-shadow(0px 0px 5px #ff3e79);
+              scale: 1.1; }
+          .container .desktop .header__desktop .header__container .header__action .header__action_item:first-child a .header__action_item_img {
+            background-image: url(images/ic_repair.png); }
+          .container .desktop .header__desktop .header__container .header__action .header__action_item:last-child a .header__action_item_img {
+            background-image: url(images/ic_checkstatus.png); }
     .container .desktop .nav {
       display: flex;
       flex-wrap: wrap;
@@ -246,6 +246,7 @@ a {
       column-gap: 32px;
       padding: 24px 0; }
       .container .desktop .brands .brands__container .brands__items .brands__item {
+        transition: 0.5s;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -253,6 +254,9 @@ a {
         border-radius: 6px;
         background: #FFF;
         padding: 0 16px; }
+        .container .desktop .brands .brands__container .brands__items .brands__item:hover {
+          border: 1px solid #41f6d7;
+          scale: 1.02; }
         .container .desktop .brands .brands__container .brands__items .brands__item .brands__item__image {
           background-size: auto;
           width: 100%;
@@ -290,6 +294,7 @@ a {
       column-gap: 32px;
       padding: 24px 0; }
       .container .desktop .techniques__container .techniques__items .techniques__item {
+        transition: 0.5s;
         display: flex;
         justify-content: space-between;
         flex: 1 0 180px;
@@ -300,6 +305,9 @@ a {
         border-radius: 6px;
         background: #FFF;
         padding: 16px 16px; }
+        .container .desktop .techniques__container .techniques__items .techniques__item:hover {
+          border: 1px solid #41f6d7;
+          scale: 1.02; }
         .container .desktop .techniques__container .techniques__items .techniques__item .techniques__item__text {
           color: #1b1c21;
           font-size: 16px;
@@ -329,7 +337,8 @@ a {
           font-family: 'TT Lakes Regular', sans-serif;
           color: #1b1c21;
           line-height: 18px;
-          letter-spacing: 0.2px; }
+          letter-spacing: 0.2px;
+          transition: 1s; }
           .container .desktop .price .price__container .price__items .price__item:nth-child(2) {
             border-radius: 6px 6px 0 0; }
           .container .desktop .price .price__container .price__items .price__item:last-child {
@@ -342,7 +351,21 @@ a {
             cursor: pointer;
             border-radius: 16px;
             background: #ff3e79;
-            border: none; }
+            border: none;
+            transition: 1s; }
+            .container .desktop .price .price__container .price__items .price__item button:hover {
+              transition: 1s;
+              background: #FFF; }
+              .container .desktop .price .price__container .price__items .price__item button:hover .button_text {
+                transition: 1s;
+                color: #ff3e79; }
+              .container .desktop .price .price__container .price__items .price__item button:hover .button_img-arrow {
+                transition: 1s;
+                background-image: url(images/dropdown.png);
+                background-size: auto;
+                width: 10px;
+                height: 12px;
+                background-repeat: no-repeat; }
             .container .desktop .price .price__container .price__items .price__item button .button_text {
               color: white;
               font-family: 'TT Lakes Bold', sans-serif;
@@ -366,6 +389,7 @@ a {
         padding: 32px 0 16px 0;
         max-width: 420px; }
       .container .desktop .price .price__container .price__button-more {
+        transition: 1s;
         display: flex;
         gap: 10px;
         align-items: center;
@@ -374,6 +398,16 @@ a {
         font-weight: 500;
         line-height: 24px;
         letter-spacing: -0.2px; }
+        .container .desktop .price .price__container .price__button-more:hover {
+          transition: 1s;
+          color: #7E7E82;
+          font-size: 18px; }
+          .container .desktop .price .price__container .price__button-more:hover .price__more-button-arrow {
+            transition: 1s;
+            background-image: url(images/Line.png);
+            background-size: auto;
+            width: 30px;
+            height: 10px; }
         .container .desktop .price .price__container .price__button-more .price__more-button-arrow {
           background-image: url(images/Line.png);
           background-size: auto;
@@ -393,8 +427,11 @@ a {
         text-align: right; }
 
 .button__more {
+  transition: 0.5s;
   display: flex;
   align-items: center; }
+  .button__more:hover {
+    opacity: 0.5; }
   .button__more .button__more-button {
     background-image: url(images/icon_arrow.png);
     background-size: auto;
@@ -434,6 +471,44 @@ a {
     height: 100%;
     background-repeat: no-repeat;
     background-position: center; }
+
+.logo a div {
+  background-image: url(images/logo.png);
+  background-size: cover;
+  width: 97px;
+  height: 51px;
+  cursor: pointer;
+  transition: 0.5s; }
+  .logo a div:hover {
+    filter: drop-shadow(0px 0px 1px #80949F);
+    scale: 1.05; }
+
+/*!*************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/1120.scss ***!
+  \*************************************************************************************************************/
+@media (max-width: 1120px) {
+  .container {
+    display: flex;
+    flex-direction: column; }
+    .container .menu {
+      display: none; }
+    .container .menu__screen {
+      padding: 19px 35px;
+      display: flex; }
+      .container .menu__screen .menu__burger {
+        display: flex;
+        gap: 20px;
+        align-items: center; }
+        .container .menu__screen .menu__burger .menu__burger_icon {
+          background-image: url(images/ic_burger.png);
+          background-size: auto;
+          background-repeat: no-repeat;
+          width: 40px;
+          height: 40px; }
+  .line {
+    width: 2px;
+    height: 32px;
+    background: #f2f2f2; } }
 
 
 /*# sourceMappingURL=main.css.map*/
