@@ -1,5 +1,5 @@
 ﻿# kata_web-core_final-task
-https://vercel.com/dimadks-projects/kata-web-core-final-task
+[https://vercel.com/dimadks-projects/kata-web-core-final-task](https://kata-web-core-final-task.vercel.app/)
 
 пока только десктопная версия... и без логики js...
 самому не нравится работа... буду наверное переделывать...
