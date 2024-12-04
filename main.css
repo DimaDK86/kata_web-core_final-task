@@ -141,7 +141,7 @@ a {
         .container .menu .menu__container .menu__footer .menu__footer-language-selection-item-activ a {
           color: #7e7e82; }
   .container .menu__screen {
-    display: no; }
+    display: none; }
   .container .desktop {
     width: 1120px;
     padding: 42px 35px 0 35px;
